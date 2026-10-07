@@ -2,18 +2,47 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Testing</title>
+  <meta charset="UTF-8" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  />
+
+  <title>Video Stream Test</title>
 </head>
 
 <body>
-  <h1>Hello</h1>
+
+  <h1>Video Stream Test</h1>
+
   <div>
-    <video id="user-video" autoplay muted></video>
-    <button id="start-btn">Start</button>
+    <video
+      id="user-video"
+      autoplay
+      muted
+      playsinline
+      width="640"
+      height="360"
+    ></video>
   </div>
+
+  <div>
+    <button id="start-btn">
+      Start Recording
+    </button>
+
+    <button id="stop-btn">
+      Stop Recording
+    </button>
+  </div>
+
+  <p id="status">
+    Initializing...
+  </p>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/script.js"></script>
+
 </body>
-<script src="script.js"> </script>
 
 </html>
